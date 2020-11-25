@@ -1,14 +1,19 @@
 package modelo;
 
+import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 public interface Dao<T> {
 	
-	T get(Long id);
-	List<T> getAll( );
-	void save(T tipo);
-	void update(T tipo);
-	void delete(T tipo);
-
+	 Optional<T> get(long id);
+	    
+	    List<T> getAll();
+	    
+	    void save(T t);
+	    
+	    void update(T t, String[] params) throws ParseException;
+	    
+	    void delete(T t);
 
 }

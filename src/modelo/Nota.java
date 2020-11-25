@@ -1,9 +1,11 @@
 package modelo;
 
+import java.util.Date;
+
 public class Nota {
 	
 	protected String titulo; 
-	protected String data;
+	protected Date data;
 	
 	public String getTitulo() {
 		return titulo;
@@ -11,10 +13,10 @@ public class Nota {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public String getData() {
+	public Date getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
 
