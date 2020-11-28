@@ -9,7 +9,8 @@ import java.util.Optional;
 
 public class NotaDao implements Dao<Nota> {
 
-	private List<Nota> notas = new ArrayList<>();
+	private List<Nota> notas = new ArrayList<Nota>();
+	
 	
 	public NotaDao() {
 		// TODO Auto-generated constructor stub
