@@ -65,10 +65,7 @@ public class CriarNotaControle {
 			s = entrada.nextLine();
 			n.setTitulo(s);
 			int dia=0,mes=0,ano=0;
-			System.out.println("Para data digite valores positivos maiores que 0 ");
-			System.out.println("Em caso de digitar um dia que passe o numero limite do mês");
-			System.out.println("a quantia restante ira passar adiante adiando assim o mês escolhido");
-			System.out.println("igualmente para o mês, caso ultrapasse 12, ira incrementar o ano");
+			System.out.println("Digite a data da nota");
 			
 			while(dia<1 ) {
 				System.out.println("digite o Dia DD: ");
