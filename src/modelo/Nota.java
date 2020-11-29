@@ -39,7 +39,7 @@ public abstract class Nota {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public Date dataNotificar(int diasSomar) {
+	protected Date dataNotificar(int diasSomar) {
 		Date dataAviso = new Date();
 		int dia = dataAviso.getDate();
 		int mes = dataAviso.getMonth();

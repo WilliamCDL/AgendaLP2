@@ -26,6 +26,7 @@ public class TesteDao {
 		 Optional<Nota> n = TesteDao.getUser(0);
 		 System.out.println(n.get().getTitulo());
 		 System.out.println(n.get().getData());
+		 n.get().notificar();
 		 
 		 
 	}
