@@ -1,12 +1,17 @@
 package modelo;
 
-import java.text.DateFormat;
+
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-
+/**
+ * Classe NotaDao para manutenção dos dados.
+ * @author William
+ *
+ */
 public class NotaDao implements Dao<Nota> {
 
 	private List<Nota> notas = new ArrayList<Nota>();
@@ -40,9 +45,8 @@ public class NotaDao implements Dao<Nota> {
 		//Caso o titulo não seja null, atualiza
 		t.setTitulo(Objects.requireNonNull(params[0], t.getTitulo()));
 		//Caso a data não seja null, atualiza
-		DateFormat f = DateFormat.getDateInstance();
-		t.setData(Objects.requireNonNullElse(f.parse(params[1]),t.getData()));
-		notas.add(t);
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		t.setData(Objects.requireNonNullElse(format.parse(params[1]),t.getData()));
 		
 	}
 

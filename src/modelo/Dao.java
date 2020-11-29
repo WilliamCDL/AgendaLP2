@@ -3,7 +3,12 @@ package modelo;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Optional;
-
+/**
+ * interface a qual permite manter os dados do tipo Programado/escolhido pelo programador.
+ * @author William
+ *
+ * @param <T> tipo a ser programado/escolhido.
+ */
 public interface Dao<T> {
 	
 	 Optional<T> get(long id);

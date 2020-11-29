@@ -6,9 +6,16 @@ public class NotaEvento extends Nota {
 
 	@Override
 	public void notificar() {
-		Date d = dataNotificar(5);
-		System.out.println(d);
-		// TODO Auto-generated method stub
+		Date atual = new Date();
+		Date d = dataNotificar(7);
+		
+		if(data.equals(atual) || data.after(atual)) {
+			if(data.before(d)) {
+				this.pertoDoPrazo=true;
+			}
+		}else {
+			this.pertoDoPrazo=false;
+		}
 
 	}
 

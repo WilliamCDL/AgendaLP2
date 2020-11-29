@@ -1,7 +1,11 @@
 package modelo;
 
 import java.util.Date;
-
+/**
+ * Classe abstrata Nota a qual possui os metodos das subclasses, gets e set
+ * @author William
+ *
+ */
 public abstract class Nota {
 	
 	protected String titulo; 
@@ -71,6 +75,13 @@ public abstract class Nota {
 		return dataAviso;
 	}
 	
+	public void print() {
+		System.out.println("Titulo : "+this.titulo);
+		System.out.print("Data "+ data.getDate() );
+		System.out.print("-"+ (data.getMonth()+1));
+		System.out.println("-"+ (data.getYear()+1900));
+	}
 	public abstract void notificar();
+	
 
 }
