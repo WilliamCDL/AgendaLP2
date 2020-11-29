@@ -75,6 +75,7 @@ public abstract class Nota {
 		return dataAviso;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void print() {
 		System.out.println("Titulo : "+this.titulo);
 		System.out.print("Data "+ data.getDate() );

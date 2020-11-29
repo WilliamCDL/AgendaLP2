@@ -36,6 +36,7 @@ public class NotaDao implements Dao<Nota> {
 	@Override
 	public void save(Nota t) {
 		// TODO Auto-generated method stub
+		t.notificar();
 		notas.add(t);
 		
 	}
@@ -47,6 +48,8 @@ public class NotaDao implements Dao<Nota> {
 		//Caso a data não seja null, atualiza
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		t.setData(Objects.requireNonNullElse(format.parse(params[1]),t.getData()));
+		
+		t.notificar();
 		
 	}
 

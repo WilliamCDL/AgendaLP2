@@ -12,6 +12,8 @@ import modelo.NotaLazer;
 import modelo.NotaProfissional;
 
 public class CriarNotaControle {
+	
+	private static Scanner entrada = new Scanner(System.in);
 	/**
 	 * está classe pede para o usuario selecionar o tipo de nota a ser criado
 	 * 
@@ -19,7 +21,6 @@ public class CriarNotaControle {
 	 * @throws ParseException 
 	 */
 	public Nota criar() throws ParseException {
-		try (Scanner entrada = new Scanner(System.in)) {
 			System.out.println("Escolha o tipo de nota a ser criado");
 			System.out.println("1 - Familiar");
 			System.out.println("2 - Lazer");
@@ -102,9 +103,8 @@ public class CriarNotaControle {
 			s=ano+"-"+mes+"-"+dia;
 			data = format.parse(s);
 			n.setData(data);
-				
+
 			return n;
-		} 
 	}
 		
 		

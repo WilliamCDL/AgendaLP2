@@ -8,7 +8,6 @@ import java.util.Optional;
 import modelo.Dao;
 import modelo.Nota;
 import modelo.NotaDao;
-import modelo.NotaEvento;
 
 public class TesteDao {
 
@@ -17,7 +16,8 @@ public class TesteDao {
 	public static void main(String[] args) throws ParseException  {
 
 		CriarNotaControle versao1 = new CriarNotaControle();
-		Nota versao1teste = versao1.criar();
+		ModificarNotaControle versao2 = new ModificarNotaControle();
+		//Nota versao1teste = versao1.criar();
 		notaDao = new NotaDao();
 		//SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		
@@ -31,13 +31,15 @@ public class TesteDao {
 		//teste1.setData(data1);
 
 		//notaDao.save(teste1);
-		notaDao.save(versao1teste);
+		notaDao.save(versao1.criar());
 		//Nota user1 = getUser(0);
 		Nota n = getUser(0);
+		n.print();
+		//String[] teste = versao2.modificar();
 		//System.out.println(n.getTitulo());
 		//System.out.println(n.getData());
 		//System.out.println(n.isPertoDoPrazo());
-		//notaDao.update(n, new String[]{"palestra", "2020-11-30"});
+		notaDao.update(n, versao2.modificar());
 		//notaDao.update(versao1teste, new String[]{"palestra2", "2020-14-30"});
 		/*Optional<Nota> n = TesteDao.getUser(0);
 		 System.out.println(n.get().getTitulo());
@@ -49,7 +51,6 @@ public class TesteDao {
 		 System.out.println(n.get().isPertoDoPrazo());
 		 */
 
-		n.notificar();
 		n.print();
 		
 		//versao1teste.notificar();
