@@ -14,11 +14,11 @@ public class ModificarNotaControle {
 		int ano=0;
 			System.out.println("digite o novo Titulo : ");
 			String s = null;
-			titulo = entrada.next();
+			titulo = entrada.nextLine();
 			System.out.println("digite a nova data: ");
 			while(dia<1 ) {
 				System.out.println("digite o novo Dia DD: ");
-				s = entrada.next();
+				s = entrada.nextLine();
 				try{
 					 dia=Integer.parseInt(s);
 				}catch(Exception e) {
@@ -27,7 +27,7 @@ public class ModificarNotaControle {
 			}
 			while(mes<1) {
 				System.out.println("digite o novo Mês MM : ");
-				s = entrada.next();
+				s = entrada.nextLine();
 				try{
 					 mes=Integer.parseInt(s);
 				}catch(Exception e) {
@@ -36,7 +36,7 @@ public class ModificarNotaControle {
 			}
 			while(ano<1) {
 				System.out.println("digite o novo Ano YYYY : ");
-				s = entrada.next();
+				s = entrada.nextLine();
 				try{
 					 ano=Integer.parseInt(s);
 				}catch(Exception e) {

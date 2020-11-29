@@ -28,11 +28,15 @@ public class AgendaControle {
 	}
 	
 	public void deletarNota(long id) {
+		if(id<1 || id>notaDao.getAll().size()) {
+			System.out.println("Não existe Nota com esse ID");
+		}else {
 		notaDao.delete(this.getUser(id));
+		}
 	}
 	
 	private Nota getUser(long id) {
-		Optional<Nota> nota = notaDao.get(id);
+		Optional<Nota> nota = notaDao.get(id-1);
 		Nota n= null;
 		return nota.orElseGet(() -> n);
 	}

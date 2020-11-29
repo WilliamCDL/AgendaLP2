@@ -34,7 +34,7 @@ public class CriarNotaControle {
 				if(j!=0) {
 					System.out.println("Entrada fora do intervalo indicado");
 				}
-				s = entrada.next();
+				s = entrada.nextLine();
 				j=1;
 				try{
 					 i=Integer.parseInt(s);
@@ -62,7 +62,7 @@ public class CriarNotaControle {
 			
 			
 			System.out.println("digite o Titulo : ");
-			s = entrada.next();
+			s = entrada.nextLine();
 			n.setTitulo(s);
 			int dia=0,mes=0,ano=0;
 			System.out.println("Para data digite valores positivos maiores que 0 ");
@@ -72,7 +72,7 @@ public class CriarNotaControle {
 			
 			while(dia<1 ) {
 				System.out.println("digite o Dia DD: ");
-				s = entrada.next();
+				s = entrada.nextLine();
 				try{
 					 dia=Integer.parseInt(s);
 				}catch(Exception e) {
@@ -81,7 +81,7 @@ public class CriarNotaControle {
 			}
 			while(mes<1) {
 				System.out.println("digite o Mês MM : ");
-				s = entrada.next();
+				s = entrada.nextLine();
 				try{
 					 mes=Integer.parseInt(s);
 				}catch(Exception e) {
@@ -90,7 +90,7 @@ public class CriarNotaControle {
 			}
 			while(ano<1) {
 				System.out.println("digite o Ano YYYY : ");
-				s = entrada.next();
+				s = entrada.nextLine();
 				try{
 					 ano=Integer.parseInt(s);
 				}catch(Exception e) {
