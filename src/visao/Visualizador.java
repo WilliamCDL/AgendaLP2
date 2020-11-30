@@ -1,6 +1,8 @@
-package controle;
+package visao;
 
 import java.util.Scanner;
+
+import controle.AgendaControle;
 
 public abstract class Visualizador {
 	protected AgendaControle agenda;

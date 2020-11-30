@@ -1,4 +1,4 @@
-package controle;
+package visao;
 
 /**
  * Classe de controle de fluxo de execução, para rodar o programa sem interface grafica, apenas no proc de comandos
